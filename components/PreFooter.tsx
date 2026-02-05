@@ -1,8 +1,12 @@
 "use client";
-
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import type { Variants } from "framer-motion";
+
+
+const EASE_OUT: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
 
 const container = {
   hidden: {},
@@ -14,17 +18,18 @@ const container = {
   },
 };
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 18 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.22, 1, 0.36, 1],
+const fadeUp: Variants = {
+    hidden: { opacity: 0, y: 18 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: EASE_OUT,
+      },
     },
-  },
-};
+  };
+  
 
 export const PreFooter = () => {
   return (
