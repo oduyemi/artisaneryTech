@@ -1,4 +1,5 @@
-"use client"
+"use client";
+import { useState } from "react";
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, LogIn, ChevronDown } from "lucide-react"
@@ -146,6 +147,66 @@ function MegaMenu({
 }
 
 
+function MobileMenuGroup({
+  label,
+  items,
+}: {
+  label: string;
+  items: Record<string, string[]>;
+}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="space-y-3">
+      <button
+        onClick={() => setOpen(!open)}
+        className="
+          flex w-full items-center justify-between
+          text-base font-medium
+          text-[var(--color-fg)]
+        "
+      >
+        {label}
+        <ChevronDown
+          className={`
+            h-4 w-4 transition-transform
+            ${open ? "rotate-180" : ""}
+          `}
+        />
+      </button>
+
+      {open && (
+        <div className="space-y-4 pl-4">
+          {Object.entries(items).map(([section, links]) => (
+            <div key={section} className="space-y-2">
+              <p className="font-mono text-xs tracking-widest text-[var(--color-text-muted)]">
+                {section.toUpperCase()}
+              </p>
+              <ul className="space-y-1">
+                {links.map(item => (
+                  <li key={item}>
+                    <Link
+                      href="#"
+                      className="
+                        block text-sm
+                        text-[var(--color-text-secondary)]
+                        hover:text-[var(--color-accent)]
+                      "
+                    >
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
@@ -241,25 +302,35 @@ export default function Header() {
               border-l border-[var(--color-surface-border)]
             "
           >
-            <nav className="mt-10 flex flex-col gap-6 pl-4">
-              {navLinks.map(link => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="
-                    text-base font-medium
-                    text-[var(--color-fg)]
-                    hover:text-[var(--color-accent)]
-                  "
-                >
-                  {link.name}
-                </Link>
-              ))}
+            <nav className="mt-10 flex flex-col gap-8 px-4">
+              <Link
+                href="/"
+                className="text-base font-medium text-[var(--color-fg)]"
+              >
+                Home
+              </Link>
 
-              <div className="mt-6">
+              <Link
+                href="/about"
+                className="text-base font-medium text-[var(--color-fg)]"
+              >
+                About
+              </Link>
+
+              <MobileMenuGroup label="Services" items={servicesMenu} />
+              <MobileMenuGroup label="Solutions" items={solutionsMenu} />
+
+              <Link
+                href="/contact"
+                className="text-base font-medium text-[var(--color-fg)]"
+              >
+                Contact
+              </Link>
+
+              <div className="pt-4">
                 <Button className="w-full">
                   <LogIn className="mr-2 h-4 w-4" />
-                  Book A Service
+                  Book a Service
                 </Button>
               </div>
             </nav>
