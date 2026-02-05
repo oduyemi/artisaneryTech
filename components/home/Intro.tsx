@@ -1,5 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, cubicBezier } from "framer-motion";
+
+
+const easeOutCubic = cubicBezier(0.22, 1, 0.36, 1);
 
 const container = {
   hidden: {},
@@ -11,6 +14,7 @@ const container = {
   },
 };
 
+
 const fadeUp = {
   hidden: {
     opacity: 0,
@@ -21,7 +25,7 @@ const fadeUp = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.22, 1, 0.36, 1], // easeOutCubic-ish
+      ease: easeOutCubic,
     },
   },
 };
@@ -32,7 +36,7 @@ const lineGrow = {
     scaleY: 1,
     transition: {
       duration: 0.8,
-      ease: [0.22, 1, 0.36, 1],
+      ease: easeOutCubic,
     },
   },
 };

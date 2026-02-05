@@ -1,10 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, cubicBezier } from "framer-motion";
 import Image from "next/image";
 
-/* -----------------------------
-   Motion
------------------------------ */
+const easeOutCubic = cubicBezier(0.22, 1, 0.36, 1);
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -13,22 +11,24 @@ const fadeUp = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: [0.22, 1, 0.36, 1],
+      ease: easeOutCubic,
     },
   },
 };
+
 
 const fadeIn = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { duration: 1.1, ease: "easeOut" },
+    transition: {
+      duration: 1.1,
+      ease: "easeOut" as const,
+    },
   },
 };
 
-/* -----------------------------
-   Component
------------------------------ */
+
 
 export const Stewardship = () => {
   return (

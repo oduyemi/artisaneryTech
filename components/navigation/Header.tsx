@@ -79,7 +79,7 @@ export default function Header() {
           </Button>
 
           <Button
-            href="/bookings"
+            asChild
             size="sm"
             className="
               bg-transparent
@@ -90,8 +90,10 @@ export default function Header() {
               hover:bg-[var(--color-accent)/5]
             "
           >
-            <LogIn className="mr-2 h-4 w-4" />
-            Book A Service
+            <Link href="/bookings">
+              <LogIn className="mr-2 h-4 w-4" />
+              Book A Service
+            </Link>
           </Button>
         </div>
 
