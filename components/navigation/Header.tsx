@@ -79,6 +79,7 @@ export default function Header() {
           </Button>
 
           <Button
+            href="/bookings"
             size="sm"
             className="
               bg-transparent
@@ -113,7 +114,7 @@ export default function Header() {
               border-l border-[var(--color-surface-border)]
             "
           >
-            <nav className="mt-10 flex flex-col gap-6">
+            <nav className="mt-10 flex flex-col gap-6 pl-4">
               {navLinks.map(link => (
                 <Link
                   key={link.name}
