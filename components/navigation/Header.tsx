@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, Search, LogIn } from "lucide-react"
+import { Menu, LogIn, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -9,11 +9,148 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 
+
+const servicesMenu = {
+  "Product Engineering": [
+    "Product Discovery & Validation",
+    "System & Architecture Design",
+    "MVP & Early-Stage Builds",
+    "Scaling & Platform Evolution",
+  ],
+  "Software Development": [
+    "Web Application Development",
+    "Mobile App Development",
+    "API & Backend Systems",
+    "Software Maintenance & Refactoring",
+  ],
+  "Technical Stewardship": [
+    "Long-term Code Ownership",
+    "Technical Audits & Reviews",
+    "Reliability & Performance Optimization",
+    "Legacy System Modernization",
+  ],
+  "Product-aligned SEO": [
+    "Technical SEO Foundations",
+    "Search-driven Product Architecture",
+    "Performance & Indexability Optimization",
+    "SEO for SaaS & Platforms",
+  ],
+};
+
+const solutionsMenu = {
+  "Use Cases": [
+    "Building New Products",
+    "Rebuilding Legacy Systems",
+    "Scaling Engineering Teams",
+    "Improving System Reliability",
+    "Reducing Technical Debt",
+  ],
+  "Who We Help": [
+    "Startups & Founders",
+    "Scale-ups",
+    "Product Teams",
+    "CTOs & Engineering Leaders",
+    "Non-technical Founders",
+  ],
+  "Industries": [
+    "SaaS & Platforms",
+    "Fintech",
+    "Healthcare & Healthtech",
+    "E-commerce",
+    "Professional Services",
+  ],
+};
+
+
+
+function MegaMenu({
+  label,
+  items,
+}: {
+  label: string;
+  items: Record<string, string[]>;
+}) {
+  return (
+    <div className="relative group">
+      {/* Trigger */}
+      <button
+        className="
+          flex items-center gap-1
+          text-sm font-medium
+          text-[var(--color-fg)]
+          transition-colors
+          hover:text-[var(--color-accent)]
+        "
+      >
+        {label}
+
+        {/* Arrow */}
+        <ChevronDown
+          className="
+            h-4 w-4
+            text-[var(--color-text-muted)]
+            transition-transform duration-200 ease-out
+            group-hover:rotate-180
+            group-hover:text-[var(--color-accent)]
+          "
+        />
+      </button>
+
+      {/* Dropdown */}
+      <div
+        className="
+          invisible opacity-0 translate-y-2
+          group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
+          absolute left-1/2 top-full z-40
+          mt-6 w-[720px] -translate-x-1/2
+          rounded-xl
+          bg-[var(--color-surface)]
+          ring-1 ring-[var(--color-surface-border)]
+          p-8
+          transition-all duration-200
+        "
+      >
+        <div className="grid grid-cols-4 gap-8">
+          {Object.entries(items).map(([section, links]) => (
+            <div key={section} className="space-y-4">
+              <p className="
+                font-mono text-xs tracking-widest
+                text-[var(--color-text-muted)]
+              ">
+                {section.toUpperCase()}
+              </p>
+
+              <ul className="space-y-2">
+                {links.map(item => (
+                  <li key={item}>
+                    <Link
+                      href="#"
+                      className="
+                        text-sm
+                        text-[var(--color-text-secondary)]
+                        hover:text-[var(--color-accent)]
+                        transition-colors
+                      "
+                    >
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "What We Do", href: "/services" },
-  { name: "Portfolio", href: "/portfolio" },
+  { name: "Services", href: "/services" },
+  { name: "Solutions", href: "/solutions" },
   { name: "Contact Us", href: "/contact" },
 ]
 
@@ -44,26 +181,15 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map(link => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="
-                relative text-sm font-medium
-                text-[var(--color-fg)]
-                transition-colors
-                hover:text-[var(--color-accent)]
-                after:absolute after:-bottom-1 after:left-0
-                after:h-[2px] after:w-0
-                after:bg-[var(--color-accent)]
-                after:transition-all after:duration-300
-                hover:after:w-full
-              "
-            >
-              {link.name}
-            </Link>
-          ))}
-        </nav>
+  <Link href="/" className="nav-link">Home</Link>
+  <Link href="/about" className="nav-link">About</Link>
+
+  <MegaMenu label="Services" items={servicesMenu} />
+  <MegaMenu label="Solutions" items={solutionsMenu} />
+
+  <Link href="/contact" className="nav-link">Contact</Link>
+</nav>
+
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-3">
@@ -75,7 +201,6 @@ export default function Header() {
               hover:text-[var(--color-accent)]
             "
           >
-            <Search className="h-5 w-5" />
           </Button>
 
           <Button

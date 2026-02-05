@@ -36,18 +36,18 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/about"
+                  href="/"
                   className="text-[var(--color-text-secondary)] transition hover:text-[var(--color-fg)]"
                 >
-                  About us
+                  Homepage
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/about"
                   className="text-[var(--color-text-secondary)] transition hover:text-[var(--color-fg)]"
                 >
-                  What we do
+                  About us
                 </Link>
               </li>
               <li>
