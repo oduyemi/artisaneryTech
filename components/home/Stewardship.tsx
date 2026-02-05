@@ -116,7 +116,7 @@ export const Stewardship = () => {
             "
           >
             <Image
-              src="/images/hero1.png"
+              src="/images/promise.png"
               alt="Long-term system stewardship"
               fill
               className="object-contain"
