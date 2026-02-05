@@ -33,7 +33,7 @@ const slides = [
     highlight: "SEO that serves products",
     description:
       "We support discoverability through product-aware SEO — grounded in system reality, not generic marketing tactics.",
-    image: "/images/Hero4.png",
+    image: "/images/Hero1.png",
   },
 ];
 
