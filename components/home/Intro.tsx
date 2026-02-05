@@ -49,7 +49,7 @@ export const Intro = () => {
         aria-hidden
         className="
           pointer-events-none absolute inset-0
-          bg-[url('/noise.png')]
+          bg-[url('/images/noise.jpg')]
           opacity-[0.035]
           mix-blend-soft-light
         "

@@ -29,7 +29,7 @@ export const BookServiceCTA = () => {
       {/* Grain */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[url('/noise.png')] opacity-[0.05] mix-blend-soft-light"
+        className="pointer-events-none absolute inset-0 bg-[url('/images/noise.jpg')] opacity-[0.05] mix-blend-soft-light"
       />
 
       <motion.div
