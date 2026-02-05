@@ -12,28 +12,28 @@ const slides = [
     highlight: "Built to last",
     description:
       "We design and build digital products with care, clarity, and long-term ownership — ensuring what’s launched continues to work, scale, and make sense.",
-    image: "/images/Hero1.png",
+    image: "/images/hero1.png",
   },
   {
     title: "Product-Minded Execution",
     highlight: "Not just delivery",
     description:
       "We operate as technical partners, challenging fragile ideas early and protecting the integrity of the product vision through disciplined execution.",
-    image: "/images/Hero2.png",
+    image: "/images/hero2.png",
   },
   {
     title: "Stewardship Beyond Launch",
     highlight: "Ongoing responsibility",
     description:
       "From performance tuning to thoughtful iteration, we remain accountable for the systems we build — because durability matters.",
-    image: "/images/Hero3.png",
+    image: "/images/hero3.png",
   },
   {
     title: "Product-Aligned Growth",
     highlight: "SEO that serves products",
     description:
       "We support discoverability through product-aware SEO — grounded in system reality, not generic marketing tactics.",
-    image: "/images/Hero1.png",
+    image: "/images/hero4.png",
   },
 ];
 
