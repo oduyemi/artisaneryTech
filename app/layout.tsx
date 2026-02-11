@@ -6,7 +6,14 @@ import "./globals.css";
 export const metadata = {
   title: "Artisanery Tech | Product-Focused Software Engineering",
   description:
-    "Artisanery Tech is the product and engineering arm of Artisanery, building scalable web and mobile products with long-term ownership, clarity, and care.",
+    "Artisanery Tech is a United States software development company specializing in custom software development, scalable web applications, product strategy, and long-term software architecture.",
+    keywords: [
+      "US software development company",
+      "custom software development",
+      "product-focused engineering firm",
+      "software consulting United States",
+      "enterprise software architecture"
+    ], 
 };
 
 const lato = Lato({
