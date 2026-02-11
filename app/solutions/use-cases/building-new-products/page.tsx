@@ -43,7 +43,7 @@ export default function BuildingNewProductsPage() {
       </section>
 
       {/* ================= APPROACH ================= */}
-      <section className="py-36 px-6 bg-black">
+      <section className="py-36 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
           {[
             {

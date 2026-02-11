@@ -14,7 +14,7 @@ export default function ScaleUpsPage() {
           className="object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-black" />
 
         <div className="relative max-w-4xl mx-auto text-center">
@@ -77,7 +77,7 @@ export default function ScaleUpsPage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="p-8 rounded-2xl bg-black border border-white/5 hover:border-white/10 transition"
+                className="p-8 rounded-2xl border border-white/5 hover:border-white/10 transition"
               >
                 <h3 className="text-xl text-white mb-4">{item.title}</h3>
                 <p className="text-white/60 leading-relaxed">{item.desc}</p>
@@ -88,7 +88,7 @@ export default function ScaleUpsPage() {
       </section>
 
       {/* ================= OUR APPROACH ================= */}
-      <section className="py-36 px-6 bg-black">
+      <section className="py-36 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl text-white font-semibold mb-24 text-center">
             How We Support Scaling Teams
@@ -152,7 +152,7 @@ export default function ScaleUpsPage() {
       </section>
 
       {/* ================= CTA TRANSITION ================= */}
-      <section className="py-24 px-6 bg-black border-t border-white/5 text-center">
+      <section className="py-24 px-6 border-t border-white/5 text-center">
         <h3 className="text-2xl md:text-3xl text-white font-semibold mb-6">
           Ready to Scale With Stability?
         </h3>

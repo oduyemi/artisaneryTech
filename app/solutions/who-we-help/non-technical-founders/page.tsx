@@ -5,7 +5,7 @@ export default function NonTechnicalFoundersPage() {
   return (
     <>
       {/* ================= HERO ================= */}
-      <section className="relative py-36 px-6 bg-black overflow-hidden">
+      <section className="relative py-36 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white/[0.04] to-transparent pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
@@ -77,7 +77,7 @@ export default function NonTechnicalFoundersPage() {
       </section>
 
       {/* ================= OUR APPROACH ================= */}
-      <section className="py-36 px-6 bg-black">
+      <section className="py-36 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl text-white font-semibold mb-24 text-center">
             How We Support Non-Technical Founders

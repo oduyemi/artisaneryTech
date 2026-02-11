@@ -70,7 +70,7 @@ export default function CTOsPage() {
       </section>
 
       {/* ================= OUR SUPPORT ================= */}
-      <section className="py-36 px-6 bg-black">
+      <section className="py-36 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl text-white font-semibold mb-24 text-center">
             How We Support Engineering Leadership

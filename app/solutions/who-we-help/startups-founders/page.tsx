@@ -94,7 +94,7 @@ export default function StartupsFoundersPage() {
       ].map((item, i) => (
         <div
           key={i}
-          className="p-8 rounded-2xl bg-black border border-white/5 hover:border-white/10 transition"
+          className="p-8 rounded-2xl border border-white/5 hover:border-white/10 transition"
         >
           <h3 className="text-xl text-white mb-4">{item.title}</h3>
           <p className="text-white/60 leading-relaxed">{item.desc}</p>
@@ -106,7 +106,7 @@ export default function StartupsFoundersPage() {
 
 
       {/* OUR APPROACH */}
-<section className="py-36 px-6 bg-black">
+<section className="py-36 px-6">
   <div className="max-w-6xl mx-auto">
     <h2 className="text-3xl md:text-4xl text-white font-semibold mb-24 text-center">
       Our Approach to Founder-Led Products
