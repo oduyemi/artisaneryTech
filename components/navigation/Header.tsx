@@ -11,6 +11,9 @@ import {
 } from "@/components/ui/sheet"
 
 
+type MenuGroup = Record<string, { label: string; href: string }[]>;
+
+
 const servicesMenu = {
   "Product Engineering": [
     {
@@ -195,12 +198,13 @@ function MegaMenu({
 
 
 
+
 function MobileMenuGroup({
   label,
   items,
 }: {
   label: string;
-  items: Record<string, string[]>;
+  items: MenuGroup;
 }) {
   const [open, setOpen] = useState(false);
 
@@ -230,18 +234,19 @@ function MobileMenuGroup({
               <p className="font-mono text-xs tracking-widest text-[var(--color-text-muted)]">
                 {section.toUpperCase()}
               </p>
+
               <ul className="space-y-1">
-                {links.map(item => (
-                  <li key={item}>
+                {links.map((item) => (
+                  <li key={item.label}>
                     <Link
-                      href="#"
+                      href={item.href}
                       className="
                         block text-sm
                         text-[var(--color-text-secondary)]
                         hover:text-[var(--color-accent)]
                       "
                     >
-                      {item}
+                      {item.label}
                     </Link>
                   </li>
                 ))}
