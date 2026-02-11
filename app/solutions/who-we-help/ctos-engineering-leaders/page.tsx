@@ -6,44 +6,52 @@ export default function CTOsPage() {
   return (
     <>
       {/* ================= HERO ================= */}
-        <section className="relative min-h-[85vh] flex items-center px-6 overflow-hidden">
+      <section className="relative h-[100vh] w-full flex items-center justify-center overflow-hidden">
 
         {/* Background Image */}
         <Image
-            src="/images/cto.png"
-            alt="Dark architectural engineering structure"
-            fill
-            priority
-            className="object-cover opacity-40"
+          src="/images/cto.png"
+          alt="Advanced infrastructure architecture"
+          fill
+          priority
+          className="object-cover scale-105"
         />
 
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/85 to-black" />
+        {/* Dark Cinematic Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black" />
 
-        {/* Subtle Grid Texture */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.03)_1px,_transparent_1px)] bg-[size:40px_40px]" />
+        {/* Radial Light Bloom */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(255,255,255,0.08),transparent_60%)]" />
+
+        {/* Subtle Noise Texture (optional if you have it) */}
+        <div className="absolute inset-0 opacity-[0.04] bg-[url('/images/noise.png')]" />
 
         {/* Content */}
-        <div className="relative max-w-4xl mx-auto w-full py-32">
-            <p className="text-xs tracking-[0.35em] text-white/40 mb-10">
+        <div className="relative max-w-5xl mx-auto px-6 text-center">
+
+          <p className="text-xs tracking-[0.4em] text-white/40 mb-10">
             WHO WE HELP
-            </p>
+          </p>
 
-            <h1 className="text-4xl md:text-6xl font-semibold text-white leading-[1.05] tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-semibold text-white leading-[1.05] tracking-tight">
             Engineering Discipline
-            <span className="block text-white/60">
-                For Teams Scaling at Velocity
+            <span className="block text-white/60 mt-4">
+              For Teams Scaling at Velocity
             </span>
-            </h1>
+          </h1>
 
-            <p className="mt-12 text-lg md:text-xl text-white/70 leading-relaxed max-w-2xl">
+          <p className="mt-14 text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
             As systems grow in complexity, architectural decisions carry long-term
             consequences. We partner with technical leaders to strengthen
             infrastructure, reduce technical risk, and bring operational maturity to
             engineering teams.
-            </p>
+          </p>
+
+          {/* Bottom Fade Line */}
+          <div className="mt-20 h-px w-32 mx-auto bg-gradient-to-r from-transparent via-white/40 to-transparent" />
         </div>
-        </section>
+
+      </section>
 
       {/* ================= THE REALITY ================= */}
       <section className="py-32 px-6 bg-neutral-950">
