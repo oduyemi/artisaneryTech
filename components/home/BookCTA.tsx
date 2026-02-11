@@ -21,7 +21,6 @@ export const BookServiceCTA = () => {
         aria-hidden
         className="
           absolute inset-0
-          bg-[radial-gradient(60%_60%_at_50%_0%,var(--color-accent)_0%,transparent_70%)]
           opacity-40
         "
       />

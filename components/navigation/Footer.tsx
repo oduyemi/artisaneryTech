@@ -52,18 +52,18 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/bookings"
+                  href="/services"
                   className="text-[var(--color-text-secondary)] transition hover:text-[var(--color-fg)]"
                 >
-                  Booking a service
+                  Our services
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/bookings"
                   className="text-[var(--color-text-secondary)] transition hover:text-[var(--color-fg)]"
                 >
-                  Contact
+                  Booking a service
                 </Link>
               </li>
             </ul>
