@@ -37,7 +37,7 @@ export const AboutCTA = () => {
               href="/contact"
               className="
                 group inline-flex items-center justify-center
-                rounded-md
+                rounded-full
                 bg-[var(--color-accent)]
                 px-8 py-4
                 text-sm font-medium text-white
