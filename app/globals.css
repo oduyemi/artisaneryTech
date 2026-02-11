@@ -83,4 +83,8 @@
     background-color: var(--color-accent);
     color: #fff7ed; 
   }
+
+  .nav-link {
+    @apply text-sm font-medium text-[var(--color-fg)] transition-colors hover:text-[var(--color-accent)];
+  }  
 }

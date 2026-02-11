@@ -13,63 +13,87 @@ import {
 
 const servicesMenu = {
   "Product Engineering": [
-    "Product Discovery & Validation",
-    "System & Architecture Design",
-    "MVP & Early-Stage Builds",
-    "Scaling & Platform Evolution",
+    {
+      label: "Product Discovery & Validation",
+      href: "/services/product-engineering/product-discovery",
+    },
+    {
+      label: "System & Architecture Design",
+      href: "/services/product-engineering/system-architecture-design",
+    },
+    {
+      label: "MVP & Early-Stage Builds",
+      href: "/services/product-engineering/mvp-early-stage-builds",
+    },
+    {
+      label: "Scaling & Platform Evolution",
+      href: "/services/product-engineering/scaling-platform-evolution",
+    },
   ],
   "Software Development": [
-    "Web Application Development",
-    "Mobile App Development",
-    "API & Backend Systems",
-    "Software Maintenance & Refactoring",
+    { label: "Web Application Development", href: "/services/software-development/web-development" },
+    { label: "Mobile App Development", href: "/services/software-development/mobile-app-development" },
+    { label: "API & Backend Systems", href: "/services/software-development/api-backend-systems" },
+    { label: "Software Maintenance & Refactoring", href: "/services/software-development/software-maintenance-refactoring" },
   ],
   "Technical Stewardship": [
-    "Long-term Code Ownership",
-    "Technical Audits & Reviews",
-    "Reliability & Performance Optimization",
-    "Legacy System Modernization",
+    { label: "Long-term Code Ownership", href: "/services/technical-stewardship/long-term-code-ownership" },
+    { label: "Technical Audits & Reviews", href: "/services/technical-stewardship/cto-as-a-service" },
+    { label: "Reliability & Performance Optimization", href: "/services/technical-stewardship/maintenance-performance-optimization" },
+    { label: "Legacy System Modernization", href: "/services/technical-stewardship/legacy-system-modernization" },
   ],
   "Product-aligned SEO": [
-    "Technical SEO Foundations",
-    "Search-driven Product Architecture",
-    "Performance & Indexability Optimization",
-    "SEO for SaaS & Platforms",
+    { label: "Technical SEO Foundations", href: "/services/seo/technical-seo-foundations" },
+    { label: "Search-driven Product Architecture", href: "/services/seo/search-driven-product-architecture" },
+    { label: "Performance & Indexability Optimization", href: "/services/seo/performance-indexability-optimization" },
+    { label: "SEO for SaaS & Platforms", href: "/services/seo/saas-and-platforms" },
   ],
 };
 
 const solutionsMenu = {
-  "Use Cases": [
-    "Building New Products",
-    "Rebuilding Legacy Systems",
-    "Scaling Engineering Teams",
-    "Improving System Reliability",
-    "Reducing Technical Debt",
+  "USE CASES": [
+    {
+      label: "Building New Products",
+      href: "/solutions/use-cases/building-new-products",
+    },
+    {
+      label: "Rebuilding Legacy Systems",
+      href: "",
+    },
+    {
+      label: "Scaling Engineering Teams",
+      href: "",
+    },
+    {
+      label: "Improving System Reliability",
+      href: "",
+    },
+    {
+      label: "Reducing Technical Debt",
+      href: "",
+    },
   ],
-  "Who We Help": [
-    "Startups & Founders",
-    "Scale-ups",
-    "Product Teams",
-    "CTOs & Engineering Leaders",
-    "Non-technical Founders",
+  "Who WE HELP": [
+    { label: "Startups & Founders", href: "/solutions/who-we-help/startups-founders" },
+    { label: "Scale-ups", href: "/solutions/who-we-help/scale-ups" },
+    { label: "Product Teams", href: "/solutions/who-we-help/product-teams" },
+    { label: "CTOs & Engineering Leaders", href: "/solutions/who-we-help/ctos-engineering-leaders" },
+    { label: "Non Technical Founders", href: "/solutions/who-we-help/non-technical-founders" },
   ],
   "Industries": [
-    "SaaS & Platforms",
-    "Fintech",
-    "Healthcare & Healthtech",
-    "E-commerce",
-    "Professional Services",
+    { label: "SaaS & Platforms", href: "" },
+    { label: "Fintech", href: "" },
+    { label: "Healthcare & Healthtech", href: "" },
+    { label: "E-commerce", href: "" },
+    { label: "Professional Services", href: "" },
   ],
 };
-
-
-
 function MegaMenu({
   label,
   items,
 }: {
   label: string;
-  items: Record<string, string[]>;
+  items: Record<string, { label: string; href: string }[]>;
 }) {
   return (
     <div className="relative group">
@@ -85,7 +109,6 @@ function MegaMenu({
       >
         {label}
 
-        {/* Arrow */}
         <ChevronDown
           className="
             h-4 w-4
@@ -100,51 +123,76 @@ function MegaMenu({
       {/* Dropdown */}
       <div
         className="
-          invisible opacity-0 translate-y-2
+          invisible opacity-0 translate-y-3
           group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
-          absolute left-1/2 top-full z-40
-          mt-6 w-[720px] -translate-x-1/2
-          rounded-xl
-          bg-[var(--color-surface)]
-          ring-1 ring-[var(--color-surface-border)]
-          p-8
+          absolute left-1/2 top-full z-50
+          mt-8 w-[980px] -translate-x-1/2
           transition-all duration-200
         "
       >
-        <div className="grid grid-cols-4 gap-8">
-          {Object.entries(items).map(([section, links]) => (
-            <div key={section} className="space-y-4">
-              <p className="
-                font-mono text-xs tracking-widest
-                text-[var(--color-text-muted)]
-              ">
-                {section.toUpperCase()}
-              </p>
+        <div
+          className="
+            relative overflow-hidden rounded-2xl
+            bg-[var(--color-surface)]
+            shadow-2xl
+            ring-1 ring-[var(--color-surface-border)]
+            p-12
+          "
+        >
+          {/* Subtle grid texture */}
+          <div className="pointer-events-none absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,var(--color-fg)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-fg)_1px,transparent_1px)] bg-[size:40px_40px]" />
 
-              <ul className="space-y-2">
-                {links.map(item => (
-                  <li key={item}>
-                    <Link
-                      href="#"
-                      className="
-                        text-sm
-                        text-[var(--color-text-secondary)]
-                        hover:text-[var(--color-accent)]
-                        transition-colors
-                      "
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="relative grid grid-cols-4 gap-12">
+            {Object.entries(items).map(([section, links], index) => (
+              <div
+                key={section}
+                className={`space-y-6 ${
+                  index !== 3 ? "border-r border-[var(--color-surface-border)] pr-8" : ""
+                }`}
+              >
+                <p className="
+                  font-mono text-xs tracking-[0.35em]
+                  text-[var(--color-text-muted)]
+                ">
+                  {section.toUpperCase()}
+                </p>
+
+                <ul className="space-y-4">
+                  {links.map((item) => (
+                    <li key={item.label}>
+                      <Link
+                        href={item.href}
+                        className="
+                          group relative block text-sm
+                          text-[var(--color-text-secondary)]
+                          transition
+                          hover:text-[var(--color-fg)]
+                        "
+                      >
+                        {item.label}
+
+                        {/* Accent underline animation */}
+                        <span
+                          className="
+                            absolute bottom-0 left-0 h-px w-0
+                            bg-[var(--color-accent)]
+                            transition-all duration-300
+                            group-hover:w-full
+                          "
+                        />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
   );
 }
+
 
 
 function MobileMenuGroup({
