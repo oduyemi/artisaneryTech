@@ -6,7 +6,7 @@ export default function CTOsPage() {
   return (
     <>
       {/* ================= HERO ================= */}
-        <section className="relative min-h-[85vh] flex items-center px-6 overflow-hidden bg-black">
+        <section className="relative min-h-[85vh] flex items-center px-6 overflow-hidden">
 
         {/* Background Image */}
         <Image

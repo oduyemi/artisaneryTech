@@ -5,7 +5,7 @@ export default function ProductTeamsPage() {
   return (
     <>
       {/* ================= HERO ================= */}
-      <section className="relative py-36 px-6 bg-black">
+      <section className="relative py-36 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
           
           {/* Image */}

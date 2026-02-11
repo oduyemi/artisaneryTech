@@ -5,7 +5,7 @@ export default function ScaleUpsPage() {
   return (
     <>
       {/* ================= HERO ================= */}
-      <section className="relative min-h-[90vh] flex items-center justify-center px-6 bg-black overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center justify-center px-6 overflow-hidden">
         <Image
           src="/images/scaleup.png"
           alt="Scaling product team collaborating"

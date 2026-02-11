@@ -6,7 +6,7 @@ export default function StartupsFoundersPage() {
   return (
     <>
         {/* HERO */}
-        <section className="relative py-36 px-6 bg-black overflow-hidden">
+        <section className="relative py-36 px-6 overflow-hidden">
         {/* Background glow */}
         <div className="absolute inset-0 bg-gradient-to-b from-white/[0.04] to-transparent pointer-events-none" />
 
