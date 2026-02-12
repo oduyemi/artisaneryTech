@@ -1,11 +1,12 @@
 "use client";
-
 import { motion } from "framer-motion";
+
 
 interface Section {
   title: string;
   content: string;
 }
+
 
 interface ServiceContentProps {
   intro: string;
@@ -14,7 +15,7 @@ interface ServiceContentProps {
 
 export function ServiceContent({ intro, sections }: ServiceContentProps) {
   return (
-    <section className="relative py-28 px-6 bg-black">
+    <section className="relative py-28 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Intro */}
         <motion.div

@@ -48,7 +48,7 @@ export default function StartupsFoundersPage() {
 
             <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-neutral-950">
                 <Image
-                src="/images/founder.png"
+                src="/images/techfounder.png"
                 alt="Founder working on product strategy"
                 width={900}
                 height={1100}

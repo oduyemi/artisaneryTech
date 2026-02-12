@@ -75,10 +75,38 @@ export const Footer = () => {
               SERVICES
             </p>
             <ul className="space-y-2 text-sm text-[var(--color-text-secondary)]">
-              <li>Product-focused development</li>
-              <li>Application stewardship</li>
-              <li>Technical strategy</li>
-              <li>Product-aligned growth</li>
+              <li>
+              <Link
+                  href="/solutions"
+                  className="text-[var(--color-text-secondary)] transition hover:text-[var(--color-fg)]"
+                >
+                  Solutions
+                </Link>
+              </li>
+              <li>
+              <Link
+                  href="/solutions/use-cases"
+                  className="text-[var(--color-text-secondary)] transition hover:text-[var(--color-fg)]"
+                >
+                  Use Cases
+                </Link>
+              </li>
+              <li>
+              <Link
+                  href="/solutions/use-cases/building-new-products"
+                  className="text-[var(--color-text-secondary)] transition hover:text-[var(--color-fg)]"
+                >
+                  Building new products
+                </Link>
+              </li>
+              <li>
+              <Link
+                  href="/services/software-development/software-maintenance-refactoring"
+                  className="text-[var(--color-text-secondary)] transition hover:text-[var(--color-fg)]"
+                >
+                  Software Maintenance & Refactoring
+                </Link>
+              </li>
             </ul>
           </div>
 

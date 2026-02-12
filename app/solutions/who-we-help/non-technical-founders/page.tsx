@@ -43,7 +43,7 @@ export default function NonTechnicalFoundersPage() {
             <div className="absolute -inset-6 bg-white/5 blur-3xl rounded-3xl opacity-30" />
             <div className="relative rounded-3xl overflow-hidden border border-white/10">
               <Image
-                src="/images/nontechnical.png"
+                src="/images/startup.png"
                 alt="Founder reviewing product strategy"
                 width={900}
                 height={1000}

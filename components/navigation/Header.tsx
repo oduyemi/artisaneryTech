@@ -61,20 +61,20 @@ const solutionsMenu = {
     },
     {
       label: "Rebuilding Legacy Systems",
-      href: "",
+      href: "/solutions/use-cases/rebuilding-legacy-systems",
     },
     {
-      label: "Scaling Engineering Teams",
-      href: "",
+      label: "Scaling Existing Platforms",
+      href: "/solutions/use-cases/scaling-existing-platforms",
     },
-    {
-      label: "Improving System Reliability",
-      href: "",
-    },
-    {
-      label: "Reducing Technical Debt",
-      href: "",
-    },
+    // {
+    //   label: "Improving System Reliability",
+    //   href: "/solutions/use-cases/",
+    // },
+    // {
+    //   label: "Reducing Technical Debt",
+    //   href: "/solutions/use-cases/",
+    // },
   ],
   "Who WE HELP": [
     { label: "Startups & Founders", href: "/solutions/who-we-help/startups-founders" },
@@ -84,11 +84,11 @@ const solutionsMenu = {
     { label: "Non Technical Founders", href: "/solutions/who-we-help/non-technical-founders" },
   ],
   "Industries": [
-    { label: "SaaS & Platforms", href: "" },
-    { label: "Fintech", href: "" },
-    { label: "Healthcare & Healthtech", href: "" },
-    { label: "E-commerce", href: "" },
-    { label: "Professional Services", href: "" },
+    { label: "SaaS & Platforms", href: "/solutions/industries/saas" },
+    { label: "Fintech", href: "/solutions/industries/fintech" },
+    { label: "Healthcare & Healthtech", href: "/solutions/industries/healthcare" },
+    { label: "E-commerce", href: "/solutions/industries/e-commerce" },
+    { label: "Professional Services", href: "/solutions/industries/professional-services" },
   ],
 };
 function MegaMenu({

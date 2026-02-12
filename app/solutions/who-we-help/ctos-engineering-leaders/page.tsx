@@ -48,7 +48,7 @@ export default function CTOsPage() {
       </section>
 
       {/* ================= THE REALITY ================= */}
-      <section className="relative py-36 px-6 bg-neutral-950 border-t border-white/5">
+      <section className="relative py-36 px-6 bg-neutral-950">
 
       <div className="max-w-6xl mx-auto">
 

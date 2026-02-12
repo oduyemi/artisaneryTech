@@ -57,14 +57,17 @@ export function ServiceCTA() {
           transition={{ duration: 0.9 }}
           className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6"
         >
-          <Link
-            href="/contact"
-            className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-black text-sm font-medium tracking-wide rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl"
-          >
-            Schedule a Strategy Call
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </Link>
+          <RequestCallbackDialog>
+            <button
+              type="button"
+              className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-black text-sm font-medium tracking-wide rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            >
+              Schedule a Strategy Call
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </button>
+          </RequestCallbackDialog>
 
+          {/* Second CTA → Normal Navigation */}
           <Link
             href="/services"
             className="inline-flex items-center px-8 py-4 border border-white/30 text-white text-sm font-medium tracking-wide rounded-full transition-all duration-300 hover:bg-white/10"
