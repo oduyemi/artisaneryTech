@@ -3,6 +3,7 @@ import { Lato } from "next/font/google"
 import ClientSideLayout from "./ClientSideLayout";
 import "./globals.css";
 import type { Metadata } from "next";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://artisanery.tech"),
@@ -35,6 +36,17 @@ const lato = Lato({
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={lato.variable}>
+      <Head>
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon16.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon32.png" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="manifest" href="/site.webmanifest" />
+          <link rel="shortcut icon" href="/favicon.ico" />
+
+          {/* Android Icons */}
+          <link rel="icon" type="image/png" sizes="192x192" href="/logo192.png" />
+          <link rel="icon" type="image/png" sizes="512x512" href="/logo512.png" />
+      </Head>
       <body>
       <script
             type="application/ld+json"
