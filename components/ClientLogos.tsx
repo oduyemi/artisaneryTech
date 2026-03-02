@@ -25,9 +25,10 @@ const trustStats = [
   { label: "Engineering Focus", value: "Platforms & SaaS" },
 ];
 
+
 export default function ClientLogos() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useReducedMotion() ?? false;
   const [paused, setPaused] = useState(false);
 
   const { scrollYProgress } = useScroll({
