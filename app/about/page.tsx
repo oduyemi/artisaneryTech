@@ -8,6 +8,7 @@ import { AboutPrinciples } from "@/components/about/Principle";
 import { AboutTimeline } from "@/components/about/Timeline";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { PreFooter } from "@/components/PreFooter";
+import ClientLogos from "@/components/ClientLogos";
 
 export default function AboutPage() {
   const schema = {
@@ -60,6 +61,10 @@ export default function AboutPage() {
 
       <SectionReveal>
         <AboutTimeline />
+      </SectionReveal>
+
+      <SectionReveal>
+        <ClientLogos />
       </SectionReveal>
 
       <SectionReveal>
